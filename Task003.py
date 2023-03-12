@@ -11,9 +11,10 @@
 # 123456 -> no
 
 ticket = (input('Введите шестизначный номер проездного билета: '))
-sum_1 = int(ticket[0]) + int(ticket[1]) + int(ticket[2])
-sum_2 = int(ticket[3]) + int(ticket[4]) + int(ticket[5])
-if (sum_1 == sum_2):
-    print('YES, билет счастливый')
+
+if (len(ticket) == 6):
+    sum_1 = int(ticket[0]) + int(ticket[1]) + int(ticket[2])
+    sum_2 = int(ticket[3]) + int(ticket[4]) + int(ticket[5])
+    print('YES, билет счастливый') if (sum_1 == sum_2) else print('NO, билет не является счастливым')
 else:
-    print('NO, билет не является счастливым')
+    print('Введен не шестизначный номер проездного билета, попробуйте ещё раз.')
